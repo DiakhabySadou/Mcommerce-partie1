@@ -120,7 +120,11 @@ public class ProductController {
     	
     	return productsMarge.toString();
     }
-
+    
+    @GetMapping(value = "/Admin/triAlphabetique")
+    public List<Product> trierProduitsParOrdreAlphabetique(){
+    	return productDao.findAllByOrderByNomAsc();
+    }
     
     
     //Pour les tests
